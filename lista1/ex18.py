@@ -10,5 +10,3 @@ elif nota >= 60:
     print("Aluno aprovado")
 else:
     print("Aluno reprovado")
-
-    
