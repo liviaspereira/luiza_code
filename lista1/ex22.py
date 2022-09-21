@@ -1,4 +1,4 @@
-'''Crie um script que leia 10 números inteiros positivos e que irá apresentar:
+"""Crie um script que leia 10 números inteiros positivos e que irá apresentar:
 ● A lista dos valores lidos de forma ordenada.
 ● A contagem de cada item. Por exemplo, se o usuário informou [1,1,1,1,2, 3],
 aqui apresentamos:
@@ -10,14 +10,15 @@ separando por vírgulas: Por exemplo, se informou [1,2,3,6]. Iremos apresentar a
 ○ 1,ímpar,não é primo
 ○ 2,par,é primo
 ○ 3,ímpar,é primo
-○ 6,par,não é primo'''
+○ 6,par,não é primo"""
 
 
 def numero_primo(numero):
     for i in range(2, numero):
         if numero % i == 0:
             return False
-    return True 
+    return True
+
 
 lista = []
 
@@ -34,23 +35,19 @@ for numero in lista:
         cont[numero] = 1
 
 for numero, quantidade in cont.items():
-    print(f'{numero}: {quantidade}x.')
+    print(f"{numero}: {quantidade}x.")
 
 for numero in cont:
     eh_primo = numero_primo(numero)
-    resposta = f'{numero}'
+    resposta = f"{numero}"
     if numero % 2 == 0:
-        resposta += ', par'
+        resposta += ", par"
     else:
-        resposta += ', impar'
+        resposta += ", impar"
 
     if eh_primo:
-        resposta += ', é primo'
+        resposta += ", é primo"
     else:
-        resposta += ', não é primo'
+        resposta += ", não é primo"
 
     print(resposta)
-
-
-
-    
